@@ -1,0 +1,2 @@
+include ':app', ':bottom-nav-bar'
+rootProject.name='HacktronicsAavesh'

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#224d62</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#263238</color>
+    <color name="daylist">#aaaaaa</color>
+    <color name="colorBackground">#000000</color>
+    <color name="textColor">#fefefe</color>
+    <color name="prizebackground">#90a4ae</color>
+
+    <color name="cardcolor">#fafafa</color>
+
+</resources>

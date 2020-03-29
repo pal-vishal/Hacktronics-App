@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HacktronicsAavesh</string>
+
+    <string-array name="Title">
+        <item>Prizes</item>
+        <item>Certificate</item>
+        <item>Asset</item>
+    </string-array>
+    <string-array name="Description">
+        <item>Top teams will be awarded cash prizes worth 50,000 and
+        certificate of excellence.</item>
+        <item>Participation certificates will be given to all the participants.</item>
+        <item>Get a chance to interact with professors from IIT, IIIT and industrial experts.
+        </item>
+    </string-array>
+    <array name="Images">
+        <item>@drawable/winner</item>
+        <item>@drawable/certificate</item>
+        <item>@drawable/people</item>
+    </array>
+</resources>

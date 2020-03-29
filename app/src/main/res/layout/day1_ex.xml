@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/parentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#224d62">
+
+            <TextView
+                android:id="@+id/EventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Event"
+                android:textColor="#fafafa"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TimeNoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:text="10:00"
+                android:textColor="#fafafa"
+                android:textSize="30sp" />
+
+
+            <ImageButton
+                android:elevation="20dp"
+
+                android:id="@+id/Mapimage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/EventName"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:background="#224d62"
+                android:src="@drawable/ic_google_maps_icon_2020_seeklogo" />
+
+            <TextView
+                android:id="@+id/VenueName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/EventName"
+                android:layout_toRightOf="@id/Mapimage"
+                android:paddingLeft="5dp"
+                android:text="Venue"
+                android:textColor="#fafafa"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/TimeWordName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/EventName"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:text="AM"
+                android:textColor="#fafafa" />
+
+            <LinearLayout
+                android:id="@+id/expand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/VenueName"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="This \nIs\nEvent\nDescription"
+                    android:textColor="#fafafa" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
