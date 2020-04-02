@@ -3,9 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:orientation="vertical"
-
-    >
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -32,63 +30,76 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:padding="5dp"
+                android:layout_marginRight="5dp"
                 android:text="10:00"
                 android:textColor="#fafafa"
                 android:textSize="30sp" />
 
 
-            <ImageButton
-                android:elevation="20dp"
-
-                android:id="@+id/Mapimage"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_below="@id/EventName"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="5dp"
-                android:adjustViewBounds="true"
-                android:background="#224d62"
-                android:src="@drawable/ic_google_maps_icon_2020_seeklogo" />
-
-            <TextView
-                android:id="@+id/VenueName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/EventName"
-                android:layout_toRightOf="@id/Mapimage"
-                android:paddingLeft="5dp"
-                android:text="Venue"
-                android:textColor="#fafafa"
-                android:textSize="15sp" />
-
             <TextView
                 android:id="@+id/TimeWordName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/EventName"
+                android:layout_below="@id/TimeNoName"
                 android:layout_alignParentRight="true"
                 android:paddingRight="5dp"
                 android:text="AM"
-                android:textColor="#fafafa" />
+                android:textColor="#fafafa"
+                android:textSize="20sp" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/expand"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/VenueName"
+                android:layout_below="@id/TimeWordName"
                 android:layout_marginTop="8dp"
-                android:background="@color/colorBackground"
-                android:orientation="vertical">
+                android:background="@color/colorBackground">
+
+                <ImageButton
+                    android:id="@+id/Mapimage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/colorBackground"
+                    android:elevation="20dp"
+                    android:src="@drawable/ic_google_maps_icon_2020_seeklogo" />
+
+                <TextView
+                    android:id="@+id/VenueName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/Mapimage"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:text="Venue"
+                    android:textColor="#fafafa"
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/Mapimage"
+                    android:layout_marginTop="5dp"
                     android:text="This \nIs\nEvent\nDescription"
+                    android:textSize="17sp"
                     android:textColor="#fafafa" />
-            </LinearLayout>
+
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:elevation="20dp"
+                    android:padding="5dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:text="View Location"
+                    android:id="@+id/ViewLocation"/>
+            </RelativeLayout>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

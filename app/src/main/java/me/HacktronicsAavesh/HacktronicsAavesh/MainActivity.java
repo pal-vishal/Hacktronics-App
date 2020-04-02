@@ -13,7 +13,7 @@ import me.HacktronicsAavesh.library.BottomBarHolderActivity;
 import me.HacktronicsAavesh.library.NavigationPage;
 
 
-public class MainActivity extends BottomBarHolderActivity implements FirstFragment.OnFragmentInteractionListener, SecondFragment.OnFragmentInteractionListener, ThirdFragment.OnFragmentInteractionListener, FourthFragment.OnFragmentInteractionListener {
+public class MainActivity extends BottomBarHolderActivity implements FirstFragment.OnFragmentInteractionListener, SecondFragment.OnFragmentInteractionListener, ThirdFragment.OnFragmentInteractionListener, FourthFragment.OnFragmentInteractionListener , FirstFragmentCardView.OnFragmentInteractionListener{
     View view;
 
 
@@ -21,7 +21,7 @@ public class MainActivity extends BottomBarHolderActivity implements FirstFragme
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        NavigationPage page1 = new NavigationPage("Home", ContextCompat.getDrawable(this, R.drawable.ic_home_black_24dp), FirstFragment.newInstance());
+        NavigationPage page1 = new NavigationPage("Home", ContextCompat.getDrawable(this, R.drawable.ic_home_black_24dp), FirstFragmentCardView.newInstance());
         NavigationPage page2 = new NavigationPage("Timeline", ContextCompat.getDrawable(this, R.drawable.ic_timeline_hacktronics), SecondFragment.newInstance());
         NavigationPage page3 = new NavigationPage("Schedule", ContextCompat.getDrawable(this, R.drawable.ic_schedule_black_24dp), FourthFragment.newInstance());
         NavigationPage page4 = new NavigationPage("Prizes", ContextCompat.getDrawable(this, R.drawable.ic_award), ThirdFragment.newInstance());

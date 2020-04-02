@@ -8,7 +8,10 @@
     <color name="colorBackground">#000000</color>
     <color name="textColor">#fefefe</color>
     <color name="prizebackground">#90a4ae</color>
-
+    <color name="color1">#F3A541</color>
+    <color name="color2">#ff5364</color>
+    <color name="color3">#4c3546</color>
     <color name="cardcolor">#fafafa</color>
-
+    <color name="color4">#174328</color>
+    <color name="color5">#0f6bd0</color>
 </resources>

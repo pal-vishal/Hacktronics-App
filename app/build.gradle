@@ -9,12 +9,12 @@ android {
         abortOnError false
     }
 
-    compileSdkVersion 25
+    compileSdkVersion 29
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "me.HacktronicsAavesh.HacktronicsAavesh"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -29,5 +29,6 @@ android {
 
 dependencies {
     compile project(path: ':bottom-nav-bar')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 
 }

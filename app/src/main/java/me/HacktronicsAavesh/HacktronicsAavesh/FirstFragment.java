@@ -13,9 +13,7 @@ import android.widget.ViewFlipper;
 
 import me.HacktronicsAavesh.bottomnavbar.R;
 
-/**
- * Created by Adib on 13-Apr-17.
- */
+
 
 public class FirstFragment extends Fragment {
 

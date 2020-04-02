@@ -25,16 +25,16 @@ public class Day2Fragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         dayContentExampleList = new ArrayList<>();
-        dayContentExampleList.add(new DayContentExample("Event1", "Venue1 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event2", "Venue2 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event3", "Venue3 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event4", "Venue4 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event5", "Venue5 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event6", "Venue6 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event7", "Venue7 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event8", "Venue8 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event9", "Venue9 is here ", "AM", "10:00"));
-        dayContentExampleList.add(new DayContentExample("Event10", "Venue10 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 1", "Venue 1 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 2", "Venue 2 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 3", "Venue 3 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 4", "Venue 4 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 5", "Venue 5 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 6", "Venue 6 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 7", "Venue 7 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 8", "Venue 8 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 9", "Venue 9 is here ", "AM", "10:00"));
+        dayContentExampleList.add(new DayContentExample("Event 10","Venue 10 is here ", "AM", "10:00"));
 
 
     }

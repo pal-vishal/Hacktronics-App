@@ -8,8 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -53,10 +55,10 @@ public class DayAdapterEx extends RecyclerView.Adapter<DayAdapterEx.DayVH> {
 
     class DayVH extends RecyclerView.ViewHolder implements View.OnClickListener {
         private static final String TAG = "DayVH";
-        LinearLayout expandable;
+        RelativeLayout expandable;
         TextView mEventText, mVenueText, mTimeWOrdText, mTimeNoText;
         Context context;
-        ImageButton mapImage;
+        Button mapImage;
 
 
         public DayVH(@NonNull final View itemView, Context context) {
@@ -65,8 +67,8 @@ public class DayAdapterEx extends RecyclerView.Adapter<DayAdapterEx.DayVH> {
             mVenueText = (TextView) itemView.findViewById(R.id.VenueName);
             mTimeWOrdText = (TextView) itemView.findViewById(R.id.TimeNoName);
             mTimeNoText = (TextView) itemView.findViewById(R.id.TimeWordName);
-            expandable = (LinearLayout) itemView.findViewById(R.id.expand);
-            mapImage = (ImageButton) itemView.findViewById(R.id.Mapimage);
+            expandable = (RelativeLayout) itemView.findViewById(R.id.expand);
+            mapImage = (Button) itemView.findViewById(R.id.ViewLocation);
             mapImage.setOnClickListener(this);
             this.context = context;
 
