@@ -15,7 +15,7 @@ import java.util.List;
 
 import me.HacktronicsAavesh.bottomnavbar.R;
 
-public class PrizeAdapter extends PagerAdapter {
+public class PrizeAdapter extends RecyclerView.Adapter<PrizeAdapter.ViewHolder> {
 
     // Member variables.
     List<Prize> mData;
@@ -30,40 +30,35 @@ public class PrizeAdapter extends PagerAdapter {
 
 
     @Override
-    public int getCount() {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    {
+        View v;
+        v = LayoutInflater.from(mContext).inflate(R.layout.prize_content, parent,false);
+        ViewHolder viewHolder = new ViewHolder(v);
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(PrizeAdapter.ViewHolder holder, int position) {
+        holder.infotext.setText(mData.get(position).getInfo());
+        holder.image.setImageResource(mData.get(position).getImageResource());
+
+
+    }
+
+    @Override
+    public int getItemCount() {
         return mData.size();
-
     }
+    class ViewHolder extends RecyclerView.ViewHolder{
+        private TextView infotext;
+        private ImageView image;
 
-    @Override
-    public boolean isViewFromObject(View view, Object object) {
-        return view.equals(object);
-    }
-
-    @Override
-    public Object instantiateItem(ViewGroup container, int position) {
-        layoutInflater = LayoutInflater.from(mContext);
-
-        View view = layoutInflater.inflate(R.layout.prize_content, container, false);
-        ImageView image;
-        TextView Title, Desc;
-        image = view.findViewById(R.id.Sampleimage);
-        Title = view.findViewById(R.id.SampleTitle);
-        Desc = view.findViewById(R.id.SampleDescription);
-
-        image.setImageResource(mData.get(position).getImageResource());
-        Title.setText(mData.get(position).getTitle());
-        Desc.setText(mData.get(position).getInfo());
-
-        container.addView(view, 0);
-        return view;
-
-
-    }
-
-    @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View) object);
+        ViewHolder(View itemView){
+            super(itemView);
+            infotext = (TextView) itemView.findViewById(R.id.HacktronicsText);
+            image = (ImageView) itemView.findViewById(R.id.HacktronicsImage);
+        }
     }
 }
 

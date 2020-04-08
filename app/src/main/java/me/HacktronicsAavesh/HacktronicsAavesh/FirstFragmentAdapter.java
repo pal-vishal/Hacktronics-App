@@ -51,7 +51,7 @@ public class FirstFragmentAdapter extends PagerAdapter {
         Desc = view.findViewById(R.id.SampleDescription);
 
         image.setImageResource(mData.get(position).getImageResource());
-        Title.setText(mData.get(position).getTitle());
+       // Title.setText(mData.get(position).getTitle());
         Desc.setText(mData.get(position).getInfo());
 
         button.setOnClickListener(new View.OnClickListener() {

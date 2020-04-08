@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HacktronicsAavesh</string>
+    <string name="app_name">Hacktronics</string>
 
     <string-array name="Title">
         <item>Prizes</item>

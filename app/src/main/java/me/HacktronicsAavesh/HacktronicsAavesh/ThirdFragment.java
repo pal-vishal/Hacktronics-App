@@ -23,7 +23,8 @@ import me.HacktronicsAavesh.bottomnavbar.R;
 
 public class ThirdFragment extends Fragment {
     private OnFragmentInteractionListener listener;
-    ViewPager viewPager;
+    private RecyclerView recyclerView;
+    private List<Prize> Content;
     View rootView;
 
     public static ThirdFragment newInstance() {
@@ -33,54 +34,29 @@ public class ThirdFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_third, container, false);
-
-
-        viewPager = (ViewPager) rootView.findViewById(R.id.ThirdFragmentViewPager);
-        viewPager.setAdapter(new MyPagerAdapter(getChildFragmentManager()));
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        PrizeAdapter prizeAdapter = new PrizeAdapter(getContext(), Content);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(prizeAdapter);
         return rootView;
     }
 
-    private class MyPagerAdapter extends FragmentPagerAdapter {
-
-        public MyPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-
-        @Override
-        public Fragment getItem(int pos) {
-            switch (pos) {
-
-                case 0:
-                    return new PrizeFragment();
-                case 1:
-                    return new CertificateFragment();
-                case 2:
-                    return new CollaborationFragment();
-
-                default:
-                    return new PrizeFragment();
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return 3;
-        }
-    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Content = new ArrayList<>();
+        Content.add(new Prize("Top teams will be awarded cash prizes worth 50,000 and certificate of excellence.", R.drawable.winner));
+        Content.add(new Prize("Participation certificates will be given to all the participants.", R.drawable.certificatenew));
+        Content.add(new Prize("Get a chance to interact with professors from IIT, IIIT and industrial experts.",R.drawable.people));
     }
 
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof ThirdFragment.OnFragmentInteractionListener) {
-            listener = (ThirdFragment.OnFragmentInteractionListener) context;
+        if (context instanceof OnFragmentInteractionListener) {
+            listener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
